@@ -32,8 +32,8 @@ public class Main {
         ArrayList<String> horsesList = verseny.getWhichPlace();
         //Menu menu1 = new Menu();
         //menu1.showMenu(actualStats, aranypatko, stats, average, avgPercent, horsesList);
-        AverageOfMatches avg = new AverageOfMatches();
-        avg.printOrderedHashMap(actualStats.getPercentMap(), "%");
+        
+        //avg.printOrderedHashMap(actualStats.getPercentMap(), "%");
                   
         //Display sd = new Display();
         //sd.display(aranypatko, verseny);

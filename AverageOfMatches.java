@@ -94,7 +94,7 @@ public class AverageOfMatches {
         for(Float number : sortingTemp) {
             for(Map.Entry<String, Float> entry : averages.entrySet()) {
                 if(number == entry.getValue()) {
-                    System.out.println(entry.getKey() + ": " + number + measurement);
+                    System.out.println(entry.getKey() + ": " + number + " " + measurement);
                 }
             }
         }

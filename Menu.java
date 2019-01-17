@@ -31,8 +31,12 @@ public class Menu {
                         break;
                 case 5: avg.statistic(stats);
                         break;
+                case 6: System.out.println("Do you want the percantage (press %) or average place (type average): ");
+                        String var = reader.nextLine();
+                        avg.printOrderedHashMap(actualStats.getPercentMap(), var);
+                        break;
                 case 0: System.exit(0); 
-                default: monthString = "Invalid HORSEEEE-chan";
+                default: monthString = "Invalid number";
                         System.out.println(monthString);
                         break;
                 }
@@ -40,12 +44,13 @@ public class Menu {
       
 }
         public void show() {
-                String[] options = {"Average of matches won for all horses", "Average placement of every horse", "Best bet", "Betting simulation", "Statistics for every horse"};
+                String[] options = {"Average of matches won for all horses", "Average placement of every horse", "Best bet", "Betting simulation", "Statistics for every horse", "Average ordered by numbers or percantage", "Exit"};
                 System.out.println("  ");
-                for (int i = 0; i < options.length; i++ ) {
+                for (int i = 0; i < options.length - 1; i++ ) {
                     int num = i + 1;
                     System.out.println(num + ". " + options[i]);
                 }
+                System.out.println(0 + ". " + options[options.length-1]);
         }
         
 }
