@@ -29,21 +29,6 @@ public class Statistics {
                buffer[j]++;
             }
         }
-        /*for(Map.Entry<String, int[]> entry : stats.entrySet()) {
-            System.out.print(entry.getKey());
-            System.out.print(": ");
-            for(int num : entry.getValue()) {
-                System.out.print(num);
-                System.out.print(", ");
-            }
-            System.out.println("");
-            
-        }*/
-        /*for(Horse horse : horseList) {
-            System.out.print(horse.getName());
-            System.out.print(": ");
-            System.out.println(horse.getNumRaces());
-        }*/
         return stats;
     }
 
@@ -60,11 +45,6 @@ public class Statistics {
             float horseAvg = numSum / (float) timesSum;
             avgMap.put(entry.getKey(), horseAvg);
             }
-            /*for(String name : avgMap.keySet()) {
-                System.out.print(name);
-                System.out.print(": ");
-                System.out.println(avgMap.get(name));
-            }*/
             return avgMap;
         }
 
@@ -79,11 +59,6 @@ public class Statistics {
             float horseAvg = (numSum / (float) timesSum) * 100;
             percentMap.put(entry.getKey(), horseAvg);
             }
-            /*for(String name : percentMap.keySet()) {
-                System.out.print(name);
-                System.out.print(": ");
-                System.out.println(percentMap.get(name) + "%");
-            }*/
             return percentMap;
         }
 

@@ -91,7 +91,7 @@ public class Display {
             }
             Thread.sleep(100);
         }
-        System.out.println("They live happily ever after!");
+        System.out.println("And they lived happily ever after...");
     }
 
     public void asciiHorseShit(int l)throws Exception{

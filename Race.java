@@ -15,16 +15,12 @@ public class Race {
         this.kennel = kennel;
     }
 
-    public /* LinkedHashMap<String, Double> */ ArrayList<String> startRace() {
+    public ArrayList<String> startRace() {
         goToArr = new ArrayList<Integer>();
         Random randomizer = new Random();
         HashSet<Integer> goToRace = new HashSet<Integer>();
-        // for(int i = goToRace.size(); i < 5; i++) {
         while (goToRace.size() != 5) {
             int temporal = randomizer.nextInt(20);
-            /*
-             * while(goToRace.contains(temporal)) { temporal = randomizer.nextInt(20); }
-             */
             goToRace.add(temporal);
         }
         for (int num : goToRace) {
@@ -41,7 +37,6 @@ public class Race {
             this.speedResults.add(horse);
         }
         for (Horse horse : this.kennel.getHorseList()) {
-            // this.kennel.getHorseList().get(i).goRest(); //sends the other horses to rest
             if (!horse.getOnRace()) {
                 horse.goRest();
             }
@@ -49,22 +44,10 @@ public class Race {
 
         Collections.sort(this.speedResults, Collections.reverseOrder()); // sorts the array
 
-        /*
-         * for(Horse horse : this.kennel.getHorseList()) { for(Horse otherHorse :
-         * this.kennel.getHorseList()) { if(horse.getActualSpeed() ==
-         * otherHorse.getActualSpeed()) { horse.setActualSpeed(); } } }
-         */
 
         for (Horse horse : speedResults) {
-            // resultMap.put(horse.getName(), horse.getActualSpeed());
-
             whichPlace.add(horse.getName());
         }
-        /*
-         * for(String horseName : resultMap.keySet()) { System.out.println(horseName +
-         * " " + resultMap.get(horseName)); } for(String horseName : whichPlace) {
-         * System.out.println(horseName); }
-         */
         return whichPlace;
     }
 

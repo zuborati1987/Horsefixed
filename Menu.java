@@ -11,40 +11,37 @@ public class Menu {
         AverageOfMatches avg = new AverageOfMatches();
 
        
-                int choosen;
+                int chosen;
+                while(true) {
                 show();
                 System.out.println(" ");
                 Scanner reader = new Scanner(System.in);
-                System.out.println("Choose from the numbers: ");
-                choosen = Integer.parseInt(reader.nextLine());
+                System.out.println("Your choice: ");
+                chosen = Integer.parseInt(reader.nextLine());
 
-
+                System.out.println("");
                 String monthString;
-                switch (choosen) {
-                case 1: avg.average(average);
+                switch (chosen) {
+                case 1: avg.bestBet(actualStats, aranypatko);
                         break;
-                case 2: avg.averagePercantage(avgPercent);
+                case 2: avg.printOrderedHashMap(actualStats.getPercentMap(), "%");
                         break;
-                case 3: avg.bestBet(actualStats, aranypatko);
+                case 3: avg.printOrderedHashMap(actualStats.getAvgMap(), " average placement");
                         break;
-                case 4: avg.bet(horsesList, aranypatko, race);
+                case 4: avg.statistic(stats);
                         break;
-                case 5: avg.statistic(stats);
-                        break;
-                case 6: System.out.println("Do you want the percantage (press %) or average place (type average): ");
-                        String var = reader.nextLine();
-                        avg.printOrderedHashMap(actualStats.getPercentMap(), var);
+                case 5: avg.bet(horsesList, aranypatko, race);
                         break;
                 case 0: System.exit(0); 
                 default: monthString = "Invalid number";
                         System.out.println(monthString);
                         break;
                 }
-                
+        }
       
 }
         public void show() {
-                String[] options = {"Average of matches won for all horses", "Average placement of every horse", "Best bet", "Betting simulation", "Statistics for every horse", "Average ordered by numbers or percantage", "Exit"};
+                String[] options = {"Best bet", "Average of matches won for all horses", "Average placement of every horse", "Statistics for every horse", "Betting simulation", "Exit"};
                 System.out.println("  ");
                 for (int i = 0; i < options.length - 1; i++ ) {
                     int num = i + 1;
