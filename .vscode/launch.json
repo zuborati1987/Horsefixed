@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "HorseFixed_1f20469c"
+        }
+    ]
+}

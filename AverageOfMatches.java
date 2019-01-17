@@ -48,7 +48,8 @@ public class AverageOfMatches {
             System.out.println(avgPercent.get(name) + "%");
         }
     }
-    public void bet(ArrayList<String> horsesList) {
+    public void bet(ArrayList<String> horsesList) throws Exception {
+        Display sd = new Display();
         for(int i = 0; i < horsesList.size(); i++) {
             int j = i + 1;
             System.out.println(j + ". " + horsesList.get(i));
@@ -59,12 +60,17 @@ public class AverageOfMatches {
         Scanner reader = new Scanner(System.in);
         System.out.println("\n Please bid on a horse: ");
         choosen = Integer.parseInt(reader.nextLine());
-        System.out.println(horsesList.get(choosen));
+        System.out.println(horsesList.get(choosen-1));
 
-        if (horsesList.get(1) == horsesList.get(choosen)) {
+
+        if (horsesList.get(0) == horsesList.get(choosen-1)) {
             System.out.println("You won");
+            Thread.sleep(2000);
+            sd.asciiHorsePorn();
         } else {
-            System.out.println("You loose");
+            System.out.println("You lost");
+            Thread.sleep(2000);
+            sd.asciiHorseShit();
         }
     }
 }

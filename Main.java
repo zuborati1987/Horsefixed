@@ -29,12 +29,11 @@ public class Main {
         HashMap<String, int[]> stats = actualStats.Stats1(begin.generateHistoricalDatas(verseny, datalizer, 200), aranypatko);
         HashMap<String, Float> average = actualStats.average();
         HashMap<String, Float> avgPercent = actualStats.averagePercent();
-        ArrayList<String> horsesList = verseny.startRace();
-        //Menu menu1 = new Menu();
-        //menu1.showMenu(actualStats, aranypatko, stats, average, avgPercent, horsesList);
+        ArrayList<String> horsesList = verseny.getWhichPlace();
+        Menu menu1 = new Menu();
+        menu1.showMenu(actualStats, aranypatko, stats, average, avgPercent, horsesList);
 
                   
-        Display sd = new Display();
-        sd.display(aranypatko, verseny);
+        
     }   
 }
