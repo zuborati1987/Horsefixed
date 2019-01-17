@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Menu {
 
-    public void showMenu(Statistics actualStats, Kennel aranypatko, HashMap<String, int[]> stats, HashMap<String, Float> average, HashMap<String, Float> avgPercent, ArrayList<String> horsesList) {
+    public void showMenu(Statistics actualStats, Kennel aranypatko, HashMap<String, int[]> stats, HashMap<String, Float> average, HashMap<String, Float> avgPercent, ArrayList<String> horsesList) throws Exception {
 
         AverageOfMatches avg = new AverageOfMatches();
 
@@ -33,9 +33,10 @@ public class Menu {
                         break;
                 case 0: System.exit(0); 
                 default: monthString = "Invalid HORSEEEE-chan";
+                        System.out.println(monthString);
                         break;
                 }
-                //System.out.println(monthString);
+                
       
 }
         public void show() {
