@@ -116,8 +116,14 @@ public class Statistics {
             }
             return bestAvg;
         }
-
         
+        public HashMap<String, Float> getAvgMap() {
+            return this.avgMap;
+        }
+
+        public HashMap<String, Float> getPercentMap() {
+            return this.percentMap;
+        }
     }
     
 

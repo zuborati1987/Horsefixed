@@ -3,6 +3,8 @@ import java.util.Map.Entry;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class AverageOfMatches {
 
@@ -65,6 +67,25 @@ public class AverageOfMatches {
             System.out.println("You won");
         } else {
             System.out.println("You loose");
+        }
+    }
+
+    public void printOrderedHashMap(HashMap<String, Float> averages, String measurement) {
+        ArrayList<Float> sortingTemp = new ArrayList<Float>();
+        for(Map.Entry<String, Float> entry : averages.entrySet()) {
+            sortingTemp.add(entry.getValue());
+        }
+        if(measurement.equals("%")) {
+            Collections.sort(sortingTemp, Collections.reverseOrder());
+        } else {
+            Collections.sort(sortingTemp);
+        }
+        for(Float number : sortingTemp) {
+            for(Map.Entry<String, Float> entry : averages.entrySet()) {
+                if(number == entry.getValue()) {
+                    System.out.println(entry.getKey() + ": " + number + measurement);
+                }
+            }
         }
     }
 }
