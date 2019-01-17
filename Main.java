@@ -38,7 +38,7 @@ public class Main {
         //Display sd = new Display();
         //sd.display(aranypatko, verseny);
         Menu menu1 = new Menu();
-        menu1.showMenu(actualStats, aranypatko, stats, average, avgPercent, horsesList);
+        menu1.showMenu(actualStats, aranypatko, stats, average, avgPercent, horsesList, verseny);
 
                   
         

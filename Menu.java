@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Menu {
 
-    public void showMenu(Statistics actualStats, Kennel aranypatko, HashMap<String, int[]> stats, HashMap<String, Float> average, HashMap<String, Float> avgPercent, ArrayList<String> horsesList) throws Exception {
+    public void showMenu(Statistics actualStats, Kennel aranypatko, HashMap<String, int[]> stats, HashMap<String, Float> average, HashMap<String, Float> avgPercent, ArrayList<String> horsesList, Race race) throws Exception {
 
         AverageOfMatches avg = new AverageOfMatches();
 
@@ -27,7 +27,7 @@ public class Menu {
                         break;
                 case 3: avg.bestBet(actualStats, aranypatko);
                         break;
-                case 4: avg.bet(horsesList);
+                case 4: avg.bet(horsesList, aranypatko, race);
                         break;
                 case 5: avg.statistic(stats);
                         break;

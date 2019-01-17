@@ -94,9 +94,53 @@ public class Display {
         System.out.println("They live happily ever after!");
     }
 
-    public void asciiHorseShit(){
-        System.out.println("  ^ ~___/^");
-        System.out.println(" ^^^/\\ /\\");
+    public void asciiHorseShit(int l)throws Exception{
+        int k = 0;
+        for(int j = 0; j < 4; j++){
+            /*if(j % 4 != 0){
+                System.out.println("    ~___/^");
+                System.out.println("   ^/\\ /\\");
+            }else{
+                if(j % 3 != 0){
+                    System.out.println("    ~___/^");
+                    System.out.println("  ^^/\\ /\\");
+                }else{
+                    if(j % 2 != 0){
+                        System.out.println("    ~___/^");
+                        System.out.println(" ^^^/\\ /\\");
+                    }else{
+                        System.out.println("  ^ ~___/^");
+                        System.out.println(" ^^^/\\ /\\");
+                    }
+                }
+            }*/
+            if(k == 0){
+                System.out.println("    ~___/^");
+                System.out.println("   ^/\\ /\\");
+            }else{
+                if(k == 1){
+                    System.out.println("    ~___/^");
+                    System.out.println("  ^^/\\ /\\");
+                }else{
+                    if(k == 2){
+                        System.out.println("    ~___/^");
+                        System.out.println(" ^^^/\\ /\\");
+                    }else{
+                        System.out.println("  ^ ~___/^");
+                        System.out.println(" ^^^/\\ /\\");
+                    }
+                }
+            }
+            k++;
+            
+            for(int i = 0; i < 34-l; i++){//screen clear
+                System.out.println("");
+            }
+            for(int t = 0; t < l; t++){
+                System.out.println("^^^");
+            }
+            Thread.sleep(500);
+        }
     }
     
 }
